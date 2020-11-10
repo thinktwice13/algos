@@ -24,6 +24,12 @@ module.exports = {
     return chunks
   },
   b: (arr, size) => {
+    const chunks = []
+    let index = 0
 
+    while(index < arr.length) {
+      chunks.push(arr.sliceindex, index + size)
+      index += size
+    }
   }
 }
