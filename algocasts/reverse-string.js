@@ -13,8 +13,6 @@ const b = str => {
 
 const c = str => str
   .split('')
-  .reduce((acc, char) => {
-    return char + acc
-  },'')
+  .reduce((rev, char) => char + rev,'')
 
 module.exports = { a, b, c }
