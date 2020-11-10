@@ -1,5 +1,12 @@
-const fn = require('./array-chunks')
+const { a} = require('./array-chunks')
+describe('array chunks', () => {
 
-test('array chunks', () => {
-  expect(fn([1,2,3,4,5])).toEqual([[1,2],[3,4],[5]])
+  test('A', () => {
+    expect(a([1, 2, 3, 4, 5], 2)).toEqual([[1, 2], [3, 4], [5]])
+    expect(a([1, 2, 3, 4, 5], 10)).toEqual([[1, 2, 3, 4, 5]])
+  })
+
+  // test('B', () => {
+
+  // })
 })
