@@ -6,10 +6,13 @@ const a = str => str
 const b = str => {
   let reversed = ''
   for(let char of str) {
+    debugger;
     reversed = char + reversed
   }
   return reversed
 }
+
+b('asdf')
 
 const c = str => str
   .split('')
