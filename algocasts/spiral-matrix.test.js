@@ -1,4 +1,4 @@
-const fn = require('./matrix')
+const fn = require('./spiral-matrix')
 
 test('matrix', () => {
   expect(fn(3)).toEqual([[1,2,3],[8,9,4],[7,6,5]])
