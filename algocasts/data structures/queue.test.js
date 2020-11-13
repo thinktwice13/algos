@@ -1,6 +1,8 @@
-const q = require('./queue')
+const Queue = require('./queue')
 
 test('queue', () => {
+  const q = new Queue()
+  
   q.add(3)
   q.add('x')
 
