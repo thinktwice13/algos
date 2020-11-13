@@ -1,7 +1,9 @@
-const s = require('./stack')
+const Stack = require('./stack')
 
 test('queue', () => {
+  const s = new Stack()
   s.add(3)
+  
   s.add('x')
 
   expect(s.remove()).toEqual('x')

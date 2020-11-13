@@ -12,4 +12,4 @@ class Stack {
   }
 }
 
-module.exports = new Stack()
+module.exports = Stack
