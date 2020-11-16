@@ -52,9 +52,21 @@ class List {
   }
 
   removeLast() {
-    let node = this.head
+    // when empty
+    if (!this.head) return;
+    // when size === 1
+    if (!this.head.next) {
+      this.head = null;
+      return;
+    }
 
-    if (!node) return null
+    // rest
+    let node = this.head
+    while (node.next.next) {
+      node = node.next
+    }
+
+    node.next = null
   }
 
   insertLast(data) {
