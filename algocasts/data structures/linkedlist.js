@@ -96,15 +96,10 @@ class List {
   }
 
   insertAt(data, idx) {
-    if (idx < 0) return;
-    if (idx === 0) {
-      return this.insertFirst(data)
-    }
-    const size = this.size()
-    if (idx >= size) return this.insertLast(data)
+    if (idx === 0) return this.insertFirst(data)
+    if (idx >= this.size()) return this.insertLast(data)
     
-    let prev = this.getAt(idx - 1)
-    // const toInsert = new Node(data, prev.next)
+    let prev = this.getAt(idx - 1) || this.getLast()
     prev.next = new Node(data, prev.next)
   }
 
