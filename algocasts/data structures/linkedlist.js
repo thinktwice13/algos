@@ -111,6 +111,15 @@ class List {
       fn(node)
     }
   }
+
+  // Symbol.iterator makes for...of possible!
+  *[Symbol.iterator]() {
+    let node = this.head
+    while(node) {
+      yield node;
+      node = node.next
+    }
+  }
 }
 
 module.exports = { Node, List}
