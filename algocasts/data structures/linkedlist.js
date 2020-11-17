@@ -40,7 +40,6 @@ class List {
     while(node.next) {
       node = node.next
     }
-
     return node
   }
 
@@ -49,7 +48,7 @@ class List {
   }
 
   removeFirst() {
-    this.head = this.head.next
+    if (this.head) this.head = this.head.next
   }
 
   removeLast() {
