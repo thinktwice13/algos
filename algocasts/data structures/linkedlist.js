@@ -36,6 +36,7 @@ class List {
 
   getLast() {
     let node = this.head
+    if (!node) return null
     while(node.next) {
       node = node.next
     }
@@ -70,23 +71,42 @@ class List {
   }
 
   insertLast(data) {
-    this.getLast().next = new Node(data)
+    let last = this.getLast()
+    let inserted = new Node(data)
+
+    if (last) last.next = inserted
+    else this.head = inserted
   }
 
   getAt(idx) {
+    if (idx > this.size() - 1) return null
+
+    let at = 0
+    let node = this.head
+    while(at < idx) {
+      node = node.next
+      at++
+    }
+    return node
   }
 
   removeAt(idx) {
+    if (!this.head) return;
     if (idx === 0) this.removeFirst()
     else this.getAt(idx - 1).next = this.getAt(idx + 1)
   }
 
   insertAt(data, idx) {
-    if (idx === 0) this.insertFirst(data)
-    else {
-      const prev = this.getAt(idx - 1)
-      prev.next = new Node(data, prev.next.next)
+    if (idx < 0) return;
+    if (idx === 0) {
+      return this.insertFirst(data)
     }
+    const size = this.size()
+    if (idx >= size) return this.insertLast(data)
+    
+    let prev = this.getAt(idx - 1)
+    // const toInsert = new Node(data, prev.next)
+    prev.next = new Node(data, prev.next)
   }
 
   forEach(fn) {

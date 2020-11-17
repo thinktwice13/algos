@@ -107,7 +107,6 @@ describe('RemoveLast', () => {
     const l = new List();
     l.insertFirst('a');
     l.removeLast();
-    console.log(l)
     expect(l.head).toEqual(null);
   });
 
