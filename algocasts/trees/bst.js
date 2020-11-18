@@ -24,6 +24,8 @@ class Node {
     if (data > n.data) return this.contains(data, n.right)
     return null
   }
+
+  verify() {}
 }
 
 module.exports = Node
