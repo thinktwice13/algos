@@ -16,7 +16,27 @@ class Node {
 }
 
 class Tree {
+  constructor() {
+    this.root = null // manually updated
+  }
 
+  // needs to keep a record of a correct order using an array. Initialize with this.root
+  traverseBF(fn, list = [this.root]) {
+    if (!list.length) return this;
+    
+    const node = list.shift()
+    list.push(...node.children)
+    fn(node)
+    return this.traverseBF(fn, list)
+  }
+
+  traverseDF(fn, root = this.root) {
+    fn(root)
+    for (let child of root.children) {
+      this.traverseDF(fn, child)
+    }
+    return this;
+  }
 }
 
 module.exports = { Node, Tree }
