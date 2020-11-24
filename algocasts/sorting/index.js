@@ -36,11 +36,26 @@ function selectionSort(arr) {
 }
 
 function mergeSort(arr) {
+  if (arr.length === 1) return arr 
+  
+  // find midpoint of the array and split 
+  const midpoint = Math.floor(arr.length/2)
+  const left = arr.slice(0, midpoint)
+  const right = arr.slice(midpoint)
 
+  return merge(mergeSort(left), mergeSort(right))
 }
 
-function merge(left, right) {
+// NOTE Maybe a bad idea to use recursion here as the problem (arr) keeps getting bigger insetad of smaller
+function merge(left, right, res = []) {
+  // I f one of the arrays is empty, merge with results
+  if (!left.length || !right.length) {
+    return [...res, ...left, ...right]
+  }
 
+  // Otherwise add smaller of the first elements to results
+  res.push(left[0] < right[0] ? left.shift() : right.shift())
+  return merge(left, right, res)
 }
 
 module.exports = { bubbleSort, selectionSort, mergeSort, merge };
