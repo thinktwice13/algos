@@ -10,6 +10,7 @@ const validate = (node, min = null, max = null) => {
 
   // return true
 
+  // Do nothing if validation passes (true) until the end 
   if (min && node.data < min || max && node.data > max) return false
   if (node.left) return validate(node.left, min, node.data)
   if (node.right) return validate(node.right, node.data, max)
