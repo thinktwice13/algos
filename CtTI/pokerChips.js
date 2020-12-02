@@ -5,7 +5,7 @@ const coins = [100,50,25,10,5,1]
 
 const map = {}
 
-module.exports = numChips = val => {
+module.exports = val => {
   let count = 0
   for (let coin of coins) {
     if (val < 1) return count
