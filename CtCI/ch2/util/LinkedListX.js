@@ -18,6 +18,17 @@ class Node {
         this.value = value
         this.next = null;
     }
+
+    getLength() {
+        let counter = 0
+        let node = this
+        while (node.next) {
+            counter++
+            node = node.next
+        }
+
+        return counter
+    }
 }
 
 class LinkedList {
