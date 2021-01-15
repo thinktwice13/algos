@@ -53,12 +53,17 @@ const bigger = num => {
   let pos = trailingZeroSize + blockOfOnesSize;
   num |= 1 << pos
 
+
+  /**
+   * Bottom part can also be written n = n + (1 << c0) + (1 << (c1 - 1)) - 1;
+   */
   // Clear less significant bits
   const a = 1 << pos; // Creates ie 1000 with 1 on position + 1
   const b = a - 1 // Creates 0111
   const mask = ~b // Creates 1000
   num &= mask
 
+  
   // Insert (blockOfOnes - 1) 1s on the right
   const aa = 1 << (blockOfOnesSize - 1);  // Creates os with a 1 on position blockOfOnes - 1
   const bb = aa - 1; // Creates 0s with 1s at positions 0 to blockOfOnes - 2
@@ -92,6 +97,9 @@ const smaller = num => {
   // Flip the zero bit that comes after trailing zeroes and the block of ones  and clear less significat bits
   let pos = c0; + c1;
 
+  /**
+   * Bottom part can also be written n = n - (1 << c1) - (1 << (c0 - 1)) + 1;
+   */
   const mask = ((~0) << (pos + 1)); // Creates ie 1000 with 1 on pos + 1
   // Do ~0 to have all 1s instead of just 1
   num &= mask
