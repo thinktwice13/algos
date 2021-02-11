@@ -28,6 +28,24 @@ const getSubset = (x, set) => {
   return subset
 }
 
+// Recursive
+// Generate subset at (index - 1), clone results and add current item to each of the cloned subsets
+const getSubsets2 = (set, index = 0) => {
+  // Base case: Add empty subset
+  if (set.length === index) {
+    return [[]]
+  } else {
+    const allSubsets = getSubsets2(set, index + 1);
+    return [
+      ...allSubsets, 
+      ...allSubsets.map(ss => ([...ss, set[index]]))
+    ]
+  }
+}
+
 // TEST
 const set = [1,2,3,4]
 const ss = getSubsets(set)
+
+const set2 = [1,2,3,4]
+const ss2 = getSubsets2(set)
