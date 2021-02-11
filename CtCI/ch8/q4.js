@@ -30,22 +30,16 @@ const getSubset = (x, set) => {
 
 // Recursive
 // Generate subset at (index - 1), clone results and add current item to each of the cloned subsets
-const getSubsets2 = (set, index = 0) => {
-  // Base case: Add empty subset
-  if (set.length === index) {
-    return [[]]
-  } else {
-    const allSubsets = getSubsets2(set, index + 1);
-    return [
-      ...allSubsets, 
-      ...allSubsets.map(ss => ([...ss, set[index]]))
-    ]
-  }
-}
+const getSubsets2 = (set, index = 0) => set.length === index
+  ? [[]]
+  : getSubsets2(set, index + 1)
+    .reduce((allSs, currentSs) => [...allSs, currentSs, [...ss, set[index]]],[]) // Return all from before, current subset and cloned current subset with current item added
 
 // TEST
 const set = [1,2,3,4]
 const ss = getSubsets(set)
+const len = ss.length
 
 const set2 = [1,2,3,4]
 const ss2 = getSubsets2(set)
+const len2 = ss2.length
