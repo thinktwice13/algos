@@ -41,13 +41,13 @@ function factPrep(N) {
     }
     i++;
   }
+  facts
 
   // N cannot have more than logN prime factors, because every prime factor is >= 2
   let n = N
   const primeFactors = []
   while (facts[n] > 0) {
     primeFactors.push(facts[n])
-    primeFactors
     n /= facts[n]
   }
   primeFactors.push(n)
@@ -55,5 +55,5 @@ function factPrep(N) {
 }
 
 
-const factn = 20
+const factn = 35
 const resn = factPrep(factn)
