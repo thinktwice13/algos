@@ -55,5 +55,5 @@ function factPrep(N) {
 }
 
 
-const factn = 35
+const factn = 40
 const resn = factPrep(factn)
