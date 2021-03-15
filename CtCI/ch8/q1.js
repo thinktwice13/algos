@@ -1,4 +1,4 @@
-// In how many ways can a child run up a taircase of size n? Possible steps: 1, 2 or 3
+// In how many ways can a child run up a staircase of size n? Possible steps: 1, 2 or 3
 
 const fn = n => {
   if (n < 0) return 0;
