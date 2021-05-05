@@ -7,7 +7,8 @@
  */
 var maxProduct = function (nums) {
   let max = Number.MIN_SAFE_INTEGER;
-  let left = (right = 1);
+  let left = 1;
+  let right = 1;
 
   for (let i = 0; i < nums.length; i++) {
     left *= nums[i];
