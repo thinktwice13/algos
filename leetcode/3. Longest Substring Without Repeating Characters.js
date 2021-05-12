@@ -5,22 +5,24 @@
  */
 var lengthOfLongestSubstring = function (s) {
   if (s.length < 2) return s.length;
-  const set = new Set();
-  let [max, l, r] = [0, 0, 0];
+  let set = new Set();
+  let [max, fast, slow] = [0, 0, 0];
 
-  while (r < s.length) {
-    if (set.has(s[r])) {
-      set.delete(s[l]);
-      l++;
+  while (fast < s.length) {
+    console.log(s[slow], s[fast], set);
+    if (set.has(s[fast])) {
+      // When repeated char at fast is found, this will run again until slow deletes the previous occurence of it
+      set.delete(s[slow]);
+      slow++;
     } else {
-      set.add(s[r]);
+      set.add(s[fast]);
       max = Math.max(set.size, max);
-      r++;
+      fast++;
     }
   }
 
   return max;
 };
 
-const str = 'pwwkew';
+const str = 'dvdf';
 const r = lengthOfLongestSubstring(str);
