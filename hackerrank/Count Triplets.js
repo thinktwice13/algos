@@ -9,18 +9,18 @@ function countTriplets(arr, r) {
   const map = {} // Record<num, [occurrences, occurrencesWithMultiple]>
 
   for (let i = arr.length - 1; i >= 0; --i) {
-    const num = arr[i] // This is me
-    const multiple = num * r // This is my first multiple
-
-    if (!map[num]) map[num] = [0,0] // Init
+    if (!map[arr[i]]) map[arr[i]] = [0,0]
+    const num = map[arr[i]] // This is me
+    if (!map[arr[i] * r]) map[arr[i] * r] = [0,0]
+    const multiple = map[arr[i] * r] // This is my first multiple
 
     // If my multiple has its own multiple recored, we're a triplet
-    count += (map[multiple]?.[1] || 0)
+    count += multiple[1]
 
     // If my multiple has been recorded, we're a pair
-    map[num][1] += (map[multiple]?.[0] || 0)
+    num[1] += multiple[0]
 
-    map[num][0]++ // Separate this from initial !map[num] check for cases where r equals 1 and I am my own multiple
+    num[0]++ // Separate this from initial !map[num] check for cases where r equals 1 and I am my own multiple
   }
 
   return count
@@ -30,5 +30,5 @@ function countTriplets(arr, r) {
 // const expected = 166661666700000
 // countTriplets(a,1) === expected
 
-const a = [2,2,2,2]
-countTriplets(a,1)
+const a = [1,2,1,2,4]
+countTriplets(a,2)
