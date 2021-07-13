@@ -28,6 +28,32 @@ const getAvgFromSlice = (slice) => {
   return slice.reduce((sum, el) => (sum += el), 0) / slice.length;
 };
 
+function solutionB(A) {
+  if (A.length < 3) return A[0] + A[1];
+
+  let minSliceAvg = Infinity;
+  let minIdx = 0;
+
+  for (let i = 0; i < A.length - 2; i++) {
+    let currSlice = A[i];
+    let len = 1;
+    for (let ii = i + 1; ii <= i + 2; ii++) {
+      currSlice += A[ii];
+      const sliceAvg = currSlice / ++len;
+      if (sliceAvg < minSliceAvg) {
+        minSliceAvg = sliceAvg;
+        minIdx = i;
+      }
+    }
+  }
+
+  // Check last pair
+  if ((A[A.length - 1] + A[A.length - 2]) / 2 < minSliceAvg)
+    return A.length - 2;
+
+  return minIdx;
+}
+
 // TEST
 const arr = [-3, -5, -8, -4, -10];
-const res = solution(arr);
+const res = solutionB(arr);
