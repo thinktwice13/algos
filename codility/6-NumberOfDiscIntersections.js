@@ -37,6 +37,46 @@ function solution(A) {
   return totalIntersections;
 }
 
+function solutionB(A) {
+  if (A.length < 2) return 0;
+
+  // Make an array if [open, open/close as true/undefined] positions for each disc
+  // Tn, Sn
+  const positions = [];
+  for (let pos = 0; pos < A.length; pos++) {
+    positions.push([pos - A[pos], true]); // Opening positions
+    positions.push([pos + A[pos]]); // Closing positions
+  }
+
+  // Sort discs by position > open > close
+  // Tn
+  positions.sort((a, b) => {
+    // By position
+    if (a[0] < b[0]) return -1;
+    if (a[0] > b[0]) return 1;
+    // By open disc first
+    if (a[1] > b[1]) return -1;
+    if (a[1] < b[1]) return 1;
+
+    return 0;
+  });
+
+  // For each position check open and closed discsc and keep track of total and currently open discs
+  let totalIntersections = 0;
+  let currentlyOpen = 0;
+  // Tn
+  for (let i = 0; i < positions.length; i++) {
+    // If open here, increase total for current and add1 to current
+    if (positions[i][1]) totalIntersections += currentlyOpen++;
+    // Else decr currently open discsc
+    else currentlyOpen--;
+  }
+
+  return totalIntersections;
+}
+
+// Total Tn, Sn
+
 // TEST
 const arr = [1, 5, 2, 1, 4, 0];
-const res = solution(arr);
+const res = solutionB(arr);
