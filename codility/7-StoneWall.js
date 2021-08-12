@@ -1,8 +1,6 @@
-
-
 function solution(H) {
-  let blockCount = 0
-  const stack = []
+  let blockCount = 0;
+  const stack = [];
 
   /**
    * Process each column by recording its size and saving to temporary stack
@@ -11,21 +9,24 @@ function solution(H) {
    * If last in stack smaller, record as new block
    */
   for (let colHeight of H) {
-    let lastInStack = stack[stack.length - 1]
-    while (lastInStack > colHeight) {
-      stack.pop()
-      lastInStack = stack[stack.length - 1]
+    // Remove all items in stack higher than current stone block
+    while (stack[stack.length - 1] > colHeight) {
+      stack.pop();
     }
 
-    if (colHeight > (lastInStack || 0)) {
-      stack.push(colHeight)
+    /**
+     * If current stone block is higher than the last item in stack (or there is no stack),
+     * add to stack and to block count
+     */
+    if (colHeight > (stack[stack.length - 1] || 0)) {
+      stack.push(colHeight);
       blockCount++;
     }
-  } 
+  }
 
-  return blockCount
+  return blockCount;
 }
 
 // TEST
-const h = [8, 8, 5, 7, 9, 8, 7, 4, 8]
-const res = solution(h)
+const h = [8, 8, 5, 7, 9, 8, 7, 4, 8];
+const res = solution(h);
