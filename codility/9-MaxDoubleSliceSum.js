@@ -5,7 +5,7 @@ function solution(A) {
   let maxSum = 0; // Total max sum
 
   for (let i = 1; i < A.length - 1; i++) {
-    // Update slice sum for fed pointer by adding the current value to the slice sum at previous idx
+    // Update slice sum for fwd pointer by adding the current value to the slice sum at previous idx
     fwd[i] = Math.max(0, A[i] + (fwd[i - 1] || 0));
 
     // Repeat for rev pointer (ii is mirror i)

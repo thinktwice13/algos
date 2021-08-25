@@ -31,15 +31,15 @@ var getIntersectionNode = function (headA, headB) {
   return null;
 };
 
-// O1 space solution: To avoid hashing visited nodes, conect llists to make a cycle
+// O1 space solution: To avoid hashing visited nodes, connect llists to make a cycle
 var getIntersectionNode = function (headA, headB) {
   if (!headA || !headB) return null;
   let [a, b] = [headA, headB];
   while (a !== b) {
     // a = a?.next ?? headB;
     // b = b?.next ?? headA;
-    a = a === null ? headB : a.next;
-    b = b === null ? headA : b.next;
+    a = a === null ? headB : a.next; // When a finishes, cotinue with b
+    b = b === null ? headA : b.next; // When b finished, continue with a
   }
 
   return a; // || b

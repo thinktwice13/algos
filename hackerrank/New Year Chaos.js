@@ -10,10 +10,11 @@ const minimumBribes = (q) => {
     const currentPosition = Number(idx);
     const originalPosition = q[idx] - 1; // value and original position of person
 
+    // Return when a person has given more than 2 bribes
     if (originalPosition - currentPosition > 2)
       return console.log('Too chaotic');
 
-    // Add to beibes when a person has received one. Check eveything from its original position - 1 to its current position
+    // Add to bribes when a person has received one. Check eveything from its original position - 1 to its current position
     const start = Math.max(0, originalPosition - 1);
     for (let ii = start; ii < currentPosition; ii++) {
       // It is a bribe if person checked has value greater than its originalPosition
