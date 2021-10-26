@@ -1,57 +1,45 @@
-// Is LL a palindrome?
 
- 
+// Check if palindrome
+// No additional space On
+const fn = (ll) => {
+  if (!ll) return false
+  if (!ll.next) return true
 
- /**
-  * Iterate with fast/slow pointer, sabving slow pointer nodes to a stack until midpoint reached.
-  * Continue iterating slow pointer until end. Return false if values of s.next and stack.pop() do not match
-  */
-const isLinkedListPalindrome = ll => {
+  const oldHead = ll.head
 
-  // Pointers
-  let f = ll
-  let s = ll
+  /**
+   * Use 2 pointers to find middle
+   * Move all remaining nodes to the start (will be in reverse order)
+   * Reset any pointer. Iterate from and compare from newHead and oldHead. All but maybe the last node should be the same
+   */
 
-  // Return true if length 1
-  if (!f.next) return true;
-  
-  // Save first half of the LL here. Initialize with head
-  const stack = []
+  let p1 = ll.head
+  let p2 = ll.head
 
-  while (f.next?.next) {
-    stack.push(s.val)
-    
-    f = f.next.next;
-    s = s.next;
+  // (If !p1.next odd number od nodes)
+  while (p1.next?.next) {
+    p1 = p1.next.next
+    p2 = p2.next
   }
 
-  if (f.next) stack.push(s.val)
-
-  // Continue iterating slow and comparing to stack
-  while (s.next) {
-    if (stack.pop() !== s.next.val) return false
-    s = s.next
+  // Move all remaining p2 nodes to head (in rev order)
+  while (p2.next != null) {
+    const { next } = p2
+    p2.next = next.next
+    next.next = ll.head
   }
 
-  return true
+  // Reset pointers to hew and old head
+  p1 = oldHead
+  p2 = ll.head
+
+  while (p2.next === oldHead) {
+    if (p1.val !== p2.val) return false
+    p1 = p1.next
+    p2 = p2.next
+  }
+
+  // Here all nodes moved to the start have been checked
+  // Only allow p1.next to exist (would be the middle of the original list)
+  return !p1.next?.next
 }
-
-// TEST
-class Node {
-  constructor(val) {
-    this.val = val
-    this.next = null
-  }
-
-  addNext(val) {
-    this.next = new Node(val)
-    return this.next
-  }
-}
-
-const ll = new Node("a")
-ll
-  .addNext('b')
-  .addNext('b')
-  .addNext('a')
-

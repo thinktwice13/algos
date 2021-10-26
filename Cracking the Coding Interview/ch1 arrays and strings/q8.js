@@ -30,7 +30,7 @@ module.exports = m => {
   }
   
   for (let col of zeroes.cols) {
-    // Update all cols in this row to zero
+    // Update all rows in this col to zero
     for (let row = 0; row < m.length; row++) m[row][col] = 0
   }
 

@@ -1,7 +1,6 @@
 
 
 // Return kth to last item in a LinkedList
-
 function A(ll, k) {
   if (!ll) throw new Error("invalid list")
 

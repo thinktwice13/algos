@@ -1,35 +1,22 @@
-module.exports = (ll, p) => {
-  if (!ll) throw new Error()
-  
-  let node = ll
-  if (!node.next) return ll
+/**
+ * @description Partition the linked list: All nodes with values p and bigger to the right side. No other ordering is required
+ * @param {LinkedList} ll 
+ * @param {number} p pivot number to use for partitioning
+ */
+const fn = (ll, p) => {
+  if (!ll || !ll.next) return ll
 
-  let saved = new LL()
-  if (node.val >= p) {
-    saved = new LL(node.val)
-    ll = node.next
-  }
-  
-  while (node.next) {
-    if (node.next.val >= p) {
-      saved.append(node.next.val)
-
-      // Remove
-      node.next = node.next.next
+  // Remove all nodes <= pivot and make them heads of the ll
+  let n = ll.head
+  while (n.next) {
+    if (n.next.val <= p) {
+      const smallerNode = n.next // Save small node
+      n.next = smallerNode.next // If null, n will be last node
+      smallerNode.next = ll.head
+      ll.head = smallerNode
     }
-    else node = node.next
-    // if (node.next.val < p) {
-    //   const move = node.next // save next node
-    //   node.next = node.next.next // delete next node. Next in interation if nodes moved around
-    //   move.next = ll // set moved node next to the start of ll
-    //   ll = move // reassign ll to start at the last moved node
-    // }
-    // else node = node.next // Next in iteration if nothing changed
+    n = n.next
   }
 
-  node.next = saved.head
-  console.log(ll)
-
-  // return ll
+  return ll
 }
-
