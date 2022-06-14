@@ -1,7 +1,7 @@
 function solution(A) {
   // Calc values for when P = 1 (initial position)
   let left = A[0];
-  let right = A.slice(1).reduce((sum, el) => (sum += el), 0);
+  let right = A.slice(1).reduce((sum, el) => (sum += el), 0); // Sum for the right of P
   let minDiff = Math.abs(left - right);
 
   // Calculate rest of P positions. Update minDiff as needed

@@ -1,7 +1,7 @@
 function solution(A) {
   const sorted = A.sort((a, b) => a - b);
 
-  // Array is not a permutatino if value does not match ththe index + 1
+  // Array is not a permutatino if value does not match the index + 1
   for (let idx = 0; idx < sorted.length; idx++) {
     if (sorted[idx] !== idx + 1) return 0;
   }
@@ -15,3 +15,21 @@ function solutionB(A) {
 
 const arr = [4, 1, 3];
 solutionB(arr);
+
+function solutionC(A) {
+  const map = {}
+
+  for (let i = 1; i <= A.length; i++) {
+    if (map[i]) {
+      return false
+    }
+
+    m[i] = true
+  }
+
+  return true
+}
+
+const arr = [4, 1, 3];
+const s = solutionC(arr);
+console.log(s)

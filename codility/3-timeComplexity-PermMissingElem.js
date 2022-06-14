@@ -15,9 +15,10 @@ function solution(A) {
 
 // Use XOR to pair and cancel numbers with their indices
 function solutionB(A) {
-  return (
-    A.reduce((res, num, idx) => res ^ num ^ idx) ^ A.length ^ (A.length + 1)
-  );
+  let r = A.reduce((res, num, idx) => res ^ num ^ idx)
+  r = r ^ A.length
+  r = r ^ (A.length + 1)
+  return r
 }
 
 const A = [1, 2, 4, 5];
