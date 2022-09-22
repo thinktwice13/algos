@@ -1,3 +1,5 @@
+# https://app.codility.com/programmers/lessons/3-time_complexity/perm_missing_elem/
+
 def fn(A):
     # XOR all elements with their expected positions
     res = 0

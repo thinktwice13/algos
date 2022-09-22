@@ -13,7 +13,7 @@ function solution(A) {
 }
 
 // Use hash
-function sultionB(A) {
+function solutionB(A) {
   // Create hash and keep track of expected. Only consider positives
   let expected = 1;
   let hash = {};
