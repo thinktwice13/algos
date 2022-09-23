@@ -21,7 +21,7 @@ function solutionB(A) {
   // If first os < 0, then all are. Take next biggest and abs smallest
   if (sorted[0] < 0) return sorted[0] * sorted[1] * sorted[sorted.length - 1];
 
-  // If first is positive and rest are negative, take 3 firstones
+  // If first is positive and rest are negative, take 3 first ones
   if (sorted[1] < 0) return sorted[0] * sorted[1] * sorted[2];
 
   // If first two are positive, use them and the max from next and last
