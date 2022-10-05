@@ -12,7 +12,7 @@ function solution(A) {
     const ii = A.length - 1 - i;
     rev[ii] = Math.max(0, A[ii] + (rev[ii + 1] || 0));
 
-    // If i is past the half of the array, we have eough info to start checking for final result
+    // If i is past the half of the array, we have enough info to start checking for final result
     if (i >= A.length / 2) {
       maxSum = Math.max(
         maxSum, // Current biggest max sum
