@@ -12,8 +12,8 @@ def fn(n):
 
 
 def test_fn():
-    t = [9,12,30,24,25]
-    e = [12,14,22,20,20]
+    t = [9, 12, 30, 24, 25]
+    e = [12, 14, 22, 20, 20]
     for i in range(len(t)):
         res = fn(t[i]) == e[i]
         if res is False:
