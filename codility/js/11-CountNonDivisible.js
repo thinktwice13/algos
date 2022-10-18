@@ -14,7 +14,7 @@ function solution(A) {
   // Calc SoE
   const sieve = {}
   // Each element is a divisor for all of its multiples. 
-  // On the sieve, mark each multiple with the element count found in hash. The sum will be the count of all dividers for the element on idx 
+  // On the sieve, mark each multiple with the element count found in hash. The sum will be the count of all divisors for the element on idx
   for (let element in counts) { // Counts object will be iterated as if sorted 1...max
     const el = +element // coerce hash key to number
     const count = counts[el]
