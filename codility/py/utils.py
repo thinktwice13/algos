@@ -7,6 +7,3 @@ def gcd(a,b):
 # Least common multiple
 def lcm(a,b):
     return a * b // gcd(a,b)
-
-
-print(lcm(5,9))
