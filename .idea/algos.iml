@@ -14,4 +14,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Python 3.8 (algos) interpreter library" level="application" />
   </component>
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="c381fd26-9c2c-4c4b-ab0f-543c5793a51e" />
+  </component>
 </module>

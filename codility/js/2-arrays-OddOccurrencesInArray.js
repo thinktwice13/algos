@@ -15,5 +15,10 @@ function solution(A) {
 // Can be solved without map: Use xor to cancel out number pairs
 function solutionB(A) {
   // write your code in JavaScript (Node.js 8.9.4)
-  return A.reduce((acc, num) => acc ^ num);
+  return A.reduce((acc, num) => {
+    console.log(acc)
+    return acc ^ num
+  });
 }
+
+solutionB([9, 3, 9, 3, 9, 7, 9])
