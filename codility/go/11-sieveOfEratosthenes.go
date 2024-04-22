@@ -30,6 +30,8 @@ func fact(n int) []int {
 	s := sieve(n)
 	fmt.Println(s)
 	var primes []int
+	// As long as the value at sieve position n is greater than 0, record it as a factor and divide n by it
+	// When value on sieve position n is zero, append n as a last prime factor
 	for s[n] > 0 {
 		primes = append(primes, s[n])
 		n /= s[n]
