@@ -7,7 +7,7 @@ func fibFrog(A []int) int {
 	A = append(A, 1)
 	N := len(A)
 	// Get fibonacci numbers up to the shore distance and remove first value to remove duplicate 1 in 1,1,2,3,...
-	distances := fib(N)[1:]
+	distances := fibs(N)[1:]
 
 	// reachable holds optimal jump counts at each position. 1 is best case scenario
 	reachable := make([]int, N)
@@ -57,7 +57,7 @@ func fibFrog(A []int) int {
 	return shore
 }
 
-func fib(n int) []int {
+func fibs(n int) []int {
 	nums := []int{1, 1}
 	i := 2
 	for i <= n {
