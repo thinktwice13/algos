@@ -1,7 +1,5 @@
 package golang
 
-// https://app.codility.com/programmers/lessons/11-sieve_of_eratosthenes/count_semiprimes/
-
 func semiPrimes(N int, P, Q []int) []int {
 	result := make([]int, len(P))
 

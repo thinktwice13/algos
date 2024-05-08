@@ -2,7 +2,6 @@ package golang
 
 import "math"
 
-// https://app.codility.com/programmers/lessons/10-prime_and_composite_numbers/min_perimeter_rectangle/
 func minPerimeterRect(N int) int {
 	// one of the dividers will be a sqrt or its integer
 	// 5 => 2

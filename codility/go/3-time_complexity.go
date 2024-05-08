@@ -1,6 +1,5 @@
 package golang
 
-// https://app.codility.com/programmers/lessons/3-time_complexity/frog_jmp/
 func frogJmp(x int, y int, d int) int {
 	dist := y - x
 	if dist%d == 0 {
@@ -10,7 +9,6 @@ func frogJmp(x int, y int, d int) int {
 	}
 }
 
-// https://app.codility.com/programmers/lessons/3-time_complexity/perm_missing_elem/
 func permMissingElem(list []int) int {
 	l := len(list)
 	// use Gauss's formula to calculate the sum of the first n positive integers
@@ -39,7 +37,6 @@ func permMissingElem2(list []int) int {
 	return num ^ (l + 1)
 }
 
-// https://app.codility.com/programmers/lessons/3-time_complexity/tape_equilibrium/
 func tapeEquilibrium(list []int) int {
 	left := list[0]
 	right := list[1]

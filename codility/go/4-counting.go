@@ -2,7 +2,6 @@ package golang
 
 import "sort"
 
-// https://app.codility.com/programmers/lessons/4-counting_elements/frog_river_one/
 func frogRiverOne(X int, A []int) int {
 	// record when a leaf falls at each position
 	leaves := make(map[int]bool, X)
@@ -16,7 +15,6 @@ func frogRiverOne(X int, A []int) int {
 	return -1
 }
 
-// https://app.codility.com/programmers/lessons/4-counting_elements/perm_check/
 func permCheck(A []int) int {
 	sort.Ints(A)
 	// check if the array is a permutation
@@ -42,7 +40,6 @@ func permCheck2(A []int) int {
 	}
 }
 
-// https://app.codility.com/programmers/lessons/4-counting_elements/max_counters/
 func maxCounters(N int, A []int) []int {
 	counters := make([]int, N)
 	currMax := 0
@@ -78,7 +75,6 @@ func maxCounters(N int, A []int) []int {
 	return counters
 }
 
-// https://app.codility.com/programmers/lessons/4-counting_elements/missing_integer/
 // find smallest missing positive integer
 func missingInteger(A []int) int {
 	found := make([]bool, len(A)+1)

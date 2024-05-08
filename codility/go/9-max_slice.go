@@ -1,6 +1,5 @@
 package golang
 
-// https://app.codility.com/programmers/lessons/9-maximum_slice_problem/max_profit/
 func maxProfit(A []int) int {
 	if len(A) == 0 {
 		return 0
@@ -38,7 +37,6 @@ func maxProfit(A []int) int {
 	return profit
 }
 
-// https://app.codility.com/programmers/lessons/9-maximum_slice_problem/max_slice_sum/
 func maxSliceSum(A []int) int {
 	if len(A) == 0 {
 		return 0
@@ -57,7 +55,6 @@ func maxSliceSum(A []int) int {
 	return maxSum
 }
 
-// https://app.codility.com/programmers/lessons/9-maximum_slice_problem/max_double_slice_sum/
 func maxDoubleSliceSum(A []int) int {
 	// leftToRight, rightToLeft slices
 	// save slice sum at each position

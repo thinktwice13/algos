@@ -1,7 +1,5 @@
 package golang
 
-// https://app.codility.com/programmers/lessons/13-fibonacci_numbers/fib_frog/
-
 func fibFrog(A []int) int {
 	// Add one more position to A to act as a shore
 	A = append(A, 1)

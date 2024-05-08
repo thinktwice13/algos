@@ -1,7 +1,5 @@
 package golang
 
-// https://app.codility.com/programmers/lessons/12-euclidean_algorithm/common_prime_divisors/
-
 func commonPrimeDivisors(N, M []int) int {
 	var count int
 	for i := 0; i < len(N); i++ {

@@ -2,7 +2,6 @@ package golang
 
 import "math/big"
 
-// https://app.codility.com/programmers/lessons/10-prime_and_composite_numbers/peaks/
 func peaks(A []int) int {
 	// No peaks can be found in < 3 length
 	if len(A) < 3 {

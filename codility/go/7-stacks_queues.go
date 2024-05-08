@@ -1,6 +1,5 @@
 package golang
 
-// https://app.codility.com/programmers/lessons/7-stacks_and_queues/brackets/
 func brackets(S string) int {
 	if len(S) == 0 {
 		return 1
@@ -37,7 +36,6 @@ func brackets(S string) int {
 	return 1
 }
 
-// https://app.codility.com/programmers/lessons/7-stacks_and_queues/fish/
 func fish(A []int, B []int) int {
 	// stack the fish going downstream and have them eat smaller fish going upstream as they pass,
 	// or get eaten by bigger fish going downstream
@@ -71,7 +69,6 @@ func fish(A []int, B []int) int {
 	return alive + len(downstream)
 }
 
-// https://app.codility.com/programmers/lessons/7-stacks_and_queues/nesting/
 func nesting(S string) int {
 	open := make([]string, 0, len(S)/2+1)
 	for _, char := range S {
@@ -97,7 +94,6 @@ func nesting(S string) int {
 	return 0
 }
 
-// https://app.codility.com/programmers/lessons/7-stacks_and_queues/stone_wall/
 func stoneWall(H []int) int {
 	var wall []int
 	var count int

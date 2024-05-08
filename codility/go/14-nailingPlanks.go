@@ -6,8 +6,6 @@ import (
 	"sort"
 )
 
-// https://app.codility.com/programmers/lessons/14-binary_search_algorithm/nailing_planks/
-
 func nailingPlanks(A, B, C []int) int {
 	// Sort so we could run binary search when nailing and removing planks
 	sort.Slice(A, func(i, ii int) bool {

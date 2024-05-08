@@ -2,7 +2,6 @@ package golang
 
 import "sort"
 
-// https://app.codility.com/programmers/lessons/6-sorting/distinct/
 func distinct(A []int) int {
 	// track number of distinct values in a map
 	distinct := make(map[int]struct{})
@@ -12,7 +11,6 @@ func distinct(A []int) int {
 	return len(distinct)
 }
 
-// https://app.codility.com/programmers/lessons/6-sorting/max_product_of_three/
 func maxProductOfThree(A []int) int {
 	// largest product of three numbers will always be either:
 	// product of three largest numbers (if all positive)
@@ -21,7 +19,6 @@ func maxProductOfThree(A []int) int {
 	return max(A[0]*A[1]*A[len(A)-1], A[len(A)-1]*A[len(A)-2]*A[len(A)-3])
 }
 
-// https://app.codility.com/programmers/lessons/6-sorting/triangle/
 func triangle(A []int) int {
 	// sort the array
 	sort.Ints(A)
@@ -34,7 +31,6 @@ func triangle(A []int) int {
 	return 0
 }
 
-// https://app.codility.com/programmers/lessons/6-sorting/number_of_disc_intersections/
 func numberOfDiscIntersections(A []int) int {
 	counts := make(map[int]*struct{ open, closed int })
 	for i, radius := range A {

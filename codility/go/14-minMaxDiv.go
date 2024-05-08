@@ -1,7 +1,5 @@
 package golang
 
-// https://app.codility.com/programmers/lessons/14-binary_search_algorithm/min_max_division/
-
 func minMaxDiv(K, M int, A []int) int {
 	// find minimum and maximum for worst case scenarios
 	// min will be the max value from A when it's the only value in the block

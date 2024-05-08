@@ -1,7 +1,6 @@
 package golang
 
 //
-//// https://app.codility.com/programmers/lessons/10-prime_and_composite_numbers/flags/
 //func placeFlags(A []int) int {
 //	// most mf we could possibly take is sqrt(lastPeak - firstPeak)
 //	// start with that number and try to set the mf. If it does not work, lower the number of mf

@@ -1,6 +1,5 @@
 package golang
 
-// https://app.codility.com/programmers/lessons/5-prefix_sums/passing_cars/
 func passingCars(A []int) int {
 	// track number of cars traveling east and multiply by each car traveling west
 	east := 0
@@ -19,7 +18,6 @@ func passingCars(A []int) int {
 	return passed
 }
 
-// https://app.codility.com/programmers/lessons/5-prefix_sums/count_div/
 func countDiv(A int, B int, K int) int {
 	n := B/K - A/K
 	if A%K == 0 {
@@ -28,7 +26,6 @@ func countDiv(A int, B int, K int) int {
 	return n
 }
 
-// https://app.codility.com/programmers/lessons/5-prefix_sums/genomic_range_query/
 func genomicRangeQuery(S string, P []int, Q []int) []int {
 	// we want to be able to compare two spots in the DNS without looping through it for each query
 	// create an array of length S+1, where each index represents the number of nucleotides at that index
@@ -64,7 +61,6 @@ func genomicRangeQuery(S string, P []int, Q []int) []int {
 	return results
 }
 
-// https://app.codility.com/programmers/lessons/5-prefix_sums/min_avg_two_slice/
 func minAvgTwoSlice(A []int) int {
 	// starting point is a slice of 2 [0,1]
 	// for each next step, there are two options:

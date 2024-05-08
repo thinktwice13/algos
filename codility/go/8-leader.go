@@ -1,6 +1,5 @@
 package golang
 
-// https://app.codility.com/programmers/lessons/8-leader/dominator/
 func dominator(A []int) int {
 	m := make(map[int]int, len(A))
 	for i, a := range A {
@@ -13,7 +12,6 @@ func dominator(A []int) int {
 	return -1
 }
 
-// https://app.codility.com/programmers/lessons/8-leader/equi_leader/
 // insight:
 // for a leader to apply to both sides of the slice, it also has to be a leader in the entire, combined slice
 // find it that way first, then move the index and count the indexes the leader applies for

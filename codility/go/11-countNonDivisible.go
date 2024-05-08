@@ -1,7 +1,5 @@
 package golang
 
-// https://app.codility.com/programmers/lessons/11-sieve_of_eratosthenes/count_non_divisible/
-
 func nonDivisible(A []int) []int {
 	// Count each element
 	counts := map[int]int{}
