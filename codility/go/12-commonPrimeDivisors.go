@@ -1,4 +1,4 @@
-package golang
+package codility
 
 func commonPrimeDivisors(N, M []int) int {
 	var count int

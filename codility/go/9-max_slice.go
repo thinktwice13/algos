@@ -1,4 +1,4 @@
-package golang
+package codility
 
 func maxProfit(A []int) int {
 	if len(A) == 0 {

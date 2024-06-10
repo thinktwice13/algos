@@ -1,4 +1,4 @@
-package golang
+package codility
 
 //func Test_placeFlags(t *testing.T) {
 //	tests := []struct {

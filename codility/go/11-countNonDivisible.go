@@ -1,4 +1,4 @@
-package golang
+package codility
 
 func nonDivisible(A []int) []int {
 	// Count each element

@@ -1,4 +1,4 @@
-package golang
+package codility
 
 func gcd(a, b int) int {
 	// Do not check which is bigger. It gets reversed in the next step if b > a

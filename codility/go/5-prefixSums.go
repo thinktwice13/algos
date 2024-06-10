@@ -1,4 +1,4 @@
-package golang
+package codility
 
 func passingCars(A []int) int {
 	// track number of cars traveling east and multiply by each car traveling west

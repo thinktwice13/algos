@@ -1,4 +1,4 @@
-package golang
+package codility
 
 func brackets(S string) int {
 	if len(S) == 0 {

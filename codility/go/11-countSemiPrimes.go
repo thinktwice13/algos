@@ -1,4 +1,4 @@
-package golang
+package codility
 
 func semiPrimes(N int, P, Q []int) []int {
 	result := make([]int, len(P))

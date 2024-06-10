@@ -1,4 +1,4 @@
-package golang
+package codility
 
 // tieRopes returns the maximum number of tied adjacent ropes for which length is <= K
 func tieRopes(K int, A []int) int {

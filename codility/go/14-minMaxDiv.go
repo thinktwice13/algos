@@ -1,4 +1,4 @@
-package golang
+package codility
 
 func minMaxDiv(K, M int, A []int) int {
 	// find minimum and maximum for worst case scenarios

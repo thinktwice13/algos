@@ -1,4 +1,4 @@
-package golang
+package codility
 
 func fibFrog(A []int) int {
 	// Add one more position to A to act as a shore

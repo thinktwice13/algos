@@ -1,4 +1,4 @@
-package golang
+package codility
 
 //
 //func placeFlags(A []int) int {

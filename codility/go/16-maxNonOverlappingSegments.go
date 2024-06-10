@@ -1,4 +1,4 @@
-package golang
+package codility
 
 func maxNonOverlappingSegments(A, B []int) int {
 	if len(A) == 0 {

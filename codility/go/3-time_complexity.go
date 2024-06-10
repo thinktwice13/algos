@@ -1,4 +1,4 @@
-package golang
+package codility
 
 func frogJmp(x int, y int, d int) int {
 	dist := y - x

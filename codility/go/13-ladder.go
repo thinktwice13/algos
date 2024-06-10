@@ -1,4 +1,4 @@
-package golang
+package codility
 
 func ladder(A, B []int) []int {
 	// number of combinations to traverse staircase match numOfSteps = fibAtPosition+1

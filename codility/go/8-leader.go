@@ -1,4 +1,4 @@
-package golang
+package codility
 
 func dominator(A []int) int {
 	m := make(map[int]int, len(A))

@@ -1,4 +1,4 @@
-package golang
+package codility
 
 func cyclicRotation(list []int, k int) []int {
 	l := len(list)

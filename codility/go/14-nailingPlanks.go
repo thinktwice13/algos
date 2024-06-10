@@ -1,4 +1,4 @@
-package golang
+package codility
 
 // FIXME: Solution: 25%
 
