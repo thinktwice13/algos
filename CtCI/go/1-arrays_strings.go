@@ -8,7 +8,7 @@ func isUnique(s string) bool {
 	// create a boolean array to keep track of characters
 	// if a character is already found, return false
 	// otherwise, set the value to true
-	var charSet [128]bool
+	var charSet [256]bool // assuming extended ASCII
 	for _, c := range s {
 		if charSet[c] {
 			return false
@@ -27,9 +27,9 @@ func isUnique2(s string) bool {
 	// checker is an integer that will be used to keep track of characters
 	// if a character is already found, return false
 	// otherwise, set the value to true
-	var checker int32
+	var checker rune
 	for _, c := range s {
-		val := 1 << (int32(c) - 'a')
+		val := c - 'a'
 		if (checker & (1 << val)) > 0 {
 			return false
 		}
@@ -37,4 +37,26 @@ func isUnique2(s string) bool {
 	}
 
 	return true
+}
+
+func isPermutation(s1, s2 string) bool {
+	counter := make(map[rune]int)
+	for _, s := range s1 {
+		if _, ok := counter[s]; !ok {
+			counter[s] = 0
+		}
+		counter[s]++
+	}
+
+	for _, s := range s2 {
+		if _, ok := counter[s]; !ok {
+			return false
+		}
+		counter[s]--
+		if counter[s] == 0 {
+			delete(counter, s)
+		}
+	}
+
+	return len(counter) == 0
 }
