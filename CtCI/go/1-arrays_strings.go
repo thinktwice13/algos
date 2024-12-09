@@ -5,10 +5,10 @@ func isUnique(s string) bool {
 		return false
 	}
 
-	// create a boolean array to keep track of characters
-	// if a character is already found, return false
-	// otherwise, set the value to true
-	var charSet [256]bool // assuming extended ASCII
+	// Create a boolean array to keep track of characters
+	// If a character is already found, return false
+	// Otherwise, set the value to true
+	var charSet [256]bool // Assuming extended ASCII
 	for _, c := range s {
 		if charSet[c] {
 			return false
@@ -24,9 +24,9 @@ func isUnique2(s string) bool {
 		return false
 	}
 
-	// checker is an integer that will be used to keep track of characters
-	// if a character is already found, return false
-	// otherwise, set the value to true
+	// Checker is an integer that will be used to keep track of characters
+	// If a character is already found, return false
+	// Otherwise, set the value to true
 	var checker rune
 	for _, c := range s {
 		val := c - 'a'
