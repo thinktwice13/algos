@@ -40,15 +40,12 @@ function mergeSort(arr) {
   
   // find midpoint of the array and split 
   const midpoint = Math.floor(arr.length/2)
-  const left = arr.slice(0, midpoint)
-  const right = arr.slice(midpoint)
-
-  return merge(mergeSort(left), mergeSort(right))
+  return merge(mergeSort(arr.slice(0, midpoint)), mergeSort(arr.slice(midpoint)))
 }
 
 // NOTE Maybe a bad idea to use recursion here as the problem (arr) keeps getting bigger insetad of smaller
 function merge(left, right, res = []) {
-  // I f one of the arrays is empty, merge with results
+  // If one of the arrays is empty, merge with results
   if (!left.length || !right.length) {
     return [...res, ...left, ...right]
   }
