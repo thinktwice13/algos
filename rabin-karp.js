@@ -24,7 +24,7 @@ const rk = (text, substr) => {
   const ssHash = hash(substr);
   let matches = 0;
 
-  // Iterate text in search for substring  and ocmpare hashes. If hashes match, ocmpare actual substring
+  // Iterate text in search for substring  and compare hashes. If hashes match, compare actual substring
   for (let i = 0; i <= text.length - substr.length; i++) {
     const currentSubstring = text.slice(i, i + substr.length);
     const currHash = hash(currentSubstring);
