@@ -1,4 +1,3 @@
-# https://codility.com/media/train/7-MaxSlice.pdf
 
 def fn(A):
     biggest, current = 0, 0

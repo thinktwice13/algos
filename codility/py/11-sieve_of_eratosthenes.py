@@ -1,4 +1,3 @@
-# https://codility.com/media/train/9-Sieve.pdf
 
 def sieve(n):
     sieve = [True] * (n + 1)

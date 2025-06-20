@@ -7,6 +7,7 @@ function solution(N) {
   let longest = 0
   let current = -Infinity
 
+
   for (let char of str) {
     if (char == 0) current++
     if (char == 1) {
@@ -18,5 +19,6 @@ function solution(N) {
   return longest
 }
 
-const n = 32
-const r = solution(n)
+for  (let input of [9, 529, 20, 15, 32,72]) {
+  console.log(`Input: ${input}, Output: ${solution(input)}`)
+}

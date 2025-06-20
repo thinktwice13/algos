@@ -1,4 +1,3 @@
-# https://codility.com/media/train/8-PrimeNumbers.pdf
 
 def divisors(n):
     """Return the number of divisors of n"""

@@ -1,1 +1,0 @@
-# https://codility.com/media/train/10-Gcd.pdf
