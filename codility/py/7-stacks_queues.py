@@ -63,7 +63,7 @@ def fish(A,B):
 def nesting(S):
     open_params = 0
     for c in S:
-        if s == "(":
+        if c == "(":
             open_params += 1
         elif open_params:
             open_params -= 1
@@ -71,3 +71,17 @@ def nesting(S):
             return 0
     # open_params needs to be empty
     return 1 if not open_params else 0
+
+assert nesting("") == 1  # empty string
+assert nesting("()") == 1
+assert nesting("(()())") == 1
+assert nesting("(())") == 1
+assert nesting("((()))") == 1
+assert nesting("(()(()))") == 1
+assert nesting(")(") == 0
+assert nesting("(()") == 0
+assert nesting("())") == 0
+assert nesting(")(") == 0
+assert nesting("(()))") == 0
+assert nesting(")(") == 0
+assert nesting("((())") == 0
