@@ -1,4 +1,3 @@
-# https://app.codility.com/programmers/lessons/8-leader/dominator/
 
 def fn(A):
     if len(A) == 0:

@@ -1,4 +1,3 @@
-# https://app.codility.com/programmers/lessons/4-counting_elements/max_counters/
 def fn(N, A):
     # Keep track of the current highest counter and value they were all supposed to be maxed out
     max_at,highest = 0, 0

@@ -1,4 +1,3 @@
-# https://app.codility.com/programmers/lessons/9-maximum_slice_problem/max_slice_sum/
 
 def fn(A):
     biggest, current = 0, 0

@@ -29,17 +29,15 @@ assert max_product_of_three([-5, -4, -3, -2, 3]) == 60
 
 def triangle(N):
     """
-    In a sorted array P < Q < R always are true P+R>Q and Q+R>P. Only need to check for non-obvious case P+Q>R (Find sum of any two consecutive nums bigger than the following one)
-    Endge cases: negative nums, len N < 3, in other languages also overflow
-    :param N:
-    :return:
+    In a sorted array P < Q < R always is true that P+R>Q and Q+R>P. Only needed checkis for non-obvious case P+Q>R (Find sum of any two consecutive nums bigger than the following one)
+    Edge cases: negative nums, len N < 3, in other languages also overflow
     """
 
     if len(N) < 3:
         return 0
 
     N.sort()
-    # In an example 1 2 5 8 10 20, going from 2 to 10 is enough for the check
+    # In an example 1 2 5 8 10 20, going from 2 to 10 is enough
     for i in range(1,len(N)-1):
         if (N[i]+N[i-1]) > N[i+1]:
             return 1

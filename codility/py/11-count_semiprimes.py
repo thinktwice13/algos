@@ -1,4 +1,3 @@
-# https://app.codility.com/programmers/lessons/11-sieve_of_eratosthenes/count_semiprimes/
 # A semiprime is a natural number that is the product of two (not necessarily distinct) prime numbers. The first few semiprimes are 4, 6, 9, 10, 14, 15, 21, 22, 25, 26.
 
 

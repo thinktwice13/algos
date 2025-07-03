@@ -1,4 +1,3 @@
-# https://app.codility.com/programmers/lessons/8-leader/equi_leader/
 
 def fn(A):
     left_vals, left_max = {}, 0

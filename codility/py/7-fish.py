@@ -1,4 +1,3 @@
-# https://app.codility.com/programmers/lessons/7-stacks_and_queues/fish/
 
 def fn(A, B):
     downstream_fish, survived = [], 0

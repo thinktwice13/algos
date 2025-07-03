@@ -1,4 +1,3 @@
-# https://app.codility.com/programmers/lessons/9-maximum_slice_problem/max_profit/
 
 def fn(A):
     purchase, sale, max_profit = A[0], A[0], 0

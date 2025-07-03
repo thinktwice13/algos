@@ -1,4 +1,3 @@
-# https://app.codility.com/programmers/lessons/14-binary_search_algorithm/min_max_division/
 
 def block_count(nums, target_sum):
     block, b_sum = 1, nums[0]  # There is always at least 1 block

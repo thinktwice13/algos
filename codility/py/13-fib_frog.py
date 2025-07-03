@@ -1,4 +1,3 @@
-# https://app.codility.com/programmers/lessons/13-fibonacci_numbers/fib_frog/
 
 
 def solution(A):

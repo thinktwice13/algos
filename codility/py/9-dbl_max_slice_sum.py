@@ -1,4 +1,3 @@
-# https://app.codility.com/programmers/lessons/9-maximum_slice_problem/max_double_slice_sum/
 
 def fn(A):
     res, fwd, bwd = 0, [0] * len(A), [0] * len(A)

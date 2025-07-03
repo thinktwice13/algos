@@ -1,4 +1,3 @@
-# https://app.codility.com/programmers/lessons/7-stacks_and_queues/nesting/
 
 def fn(S):
     open_parens = []
