@@ -11,7 +11,7 @@ assert cyclic([3, 8, 9, 7, 6], 3) == [9, 7, 6, 3, 8]
 assert cyclic([0, 0, 0], 1) == [0, 0, 0]
 assert cyclic([1, 2, 3, 4], 4) == [1, 2, 3, 4]
 
-def oddOccurences(A):
+def odd_occurences(A):
     map = {}
     for el in A:
         if el in map:
@@ -25,7 +25,7 @@ def oddOccurences(A):
     return list(map.keys())[0]
 
 
-def oddOccurences2(A):
+def odd_occurences2(A):
     result = 0
     for el in A:
         result ^= el
@@ -33,10 +33,10 @@ def oddOccurences2(A):
     return result
 
 
-assert oddOccurences([9, 3, 9, 3, 9, 7, 9]) == 7
-assert oddOccurences([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]) == 11
-assert oddOccurences([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11]) == 11
+assert odd_occurences([9, 3, 9, 3, 9, 7, 9]) == 7
+assert odd_occurences([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]) == 11
+assert odd_occurences([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11]) == 11
 
-assert oddOccurences2([9, 3, 9, 3, 9, 7, 9]) == 7
-assert oddOccurences2([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]) == 11
-assert oddOccurences2([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11]) == 11
+assert odd_occurences2([9, 3, 9, 3, 9, 7, 9]) == 7
+assert odd_occurences2([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]) == 11
+assert odd_occurences2([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11]) == 11

@@ -1,16 +1,16 @@
 import math
 
 
-def frogJump(pos, target_pos, jump_distance):
+def frog_jump(pos, target_pos, jump_distance):
     return math.ceil((target_pos - pos) / jump_distance)
 
 
-assert frogJump(10, 85, 30) == 3
-assert frogJump(10, 100, 30) == 3
-assert frogJump(10, 100, 10) == 9
+assert frog_jump(10, 85, 30) == 3
+assert frog_jump(10, 100, 30) == 3
+assert frog_jump(10, 100, 10) == 9
 
 
-def missingElement(A):
+def missing_element(A):
     # XOR all elements with their expected positions
     res = 0
     for i in range(len(A)):
@@ -22,13 +22,13 @@ def missingElement(A):
     return res ^ (len(A) + 1)
 
 
-assert missingElement([2, 3, 1, 5]) == 4
-assert missingElement([6, 1, 4, 2, 3]) == 5
-assert missingElement([5, 2, 4, 3]) == 1
-assert missingElement([4, 1, 2, 3]) == 5
+assert missing_element([2, 3, 1, 5]) == 4
+assert missing_element([6, 1, 4, 2, 3]) == 5
+assert missing_element([5, 2, 4, 3]) == 1
+assert missing_element([4, 1, 2, 3]) == 5
 
 
-def tapeEquilibrium(A):
+def tape_equilibrium(A):
     left, right = 0, sum(A)
     # best = right doesn't work for negative numbers
     best = float('inf')
@@ -42,8 +42,8 @@ def tapeEquilibrium(A):
     return best
 
 
-assert tapeEquilibrium([3, 1, 2, 4, 3]) == 1
-assert tapeEquilibrium([1, 1]) == 0
-assert tapeEquilibrium([-1000, 1000]) == 0
-assert tapeEquilibrium([1000, -1000]) == 2000
-assert tapeEquilibrium([-10, -20, -30, -40, 100]) == 0
+assert tape_equilibrium([3, 1, 2, 4, 3]) == 1
+assert tape_equilibrium([1, 1]) == 0
+assert tape_equilibrium([-1000, 1000]) == 0
+assert tape_equilibrium([1000, -1000]) == 2000
+assert tape_equilibrium([-10, -20, -30, -40, 100]) == 0
